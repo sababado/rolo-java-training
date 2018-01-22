@@ -2,7 +2,7 @@
 import java.util.Scanner;
 
 // Class to demonstrate use of operators.
-public class Operators {
+public class MathOperators {
 	// Intro method to the program.
 	public static void main(String args[]){
 		// Define a scanner to read from the system input.
@@ -35,5 +35,4 @@ public class Operators {
  TEACHING NOTES
  Show how to read an integer.
  Then show how to perform basic math calculations, with emphasis on modulus.
- Homework assignment. How do you determine if a number is odd or even?
  */
