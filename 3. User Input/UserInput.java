@@ -5,23 +5,27 @@ import java.util.Scanner;
 public class UserInput {
 	// Intro method to the program.
 	public static void main(String args[]){
-		// Define a scanner to read from the system input.
-		// A scanner can also read from a file or other sources.
+		
 		Scanner scan = new Scanner(System.in);
-		
+
 		// Prompt for the first line
-		System.out.print("Line 1: ");
+		System.out.print("First Name: ");
 		// Read the first line
-		String lineOne = scan.nextLine();
-		
-		// Prompt for the second line
-		System.out.print("Line 2: ");
-		// Read the second line
-		String lineTwo = scan.nextLine();
-		
-		// Output the inputs
-		System.out.println("1: "+ lineOne);
-		System.out.println("2: "+ lineTwo);
+		String firstName = scan.nextLine();
+
+        // Prompt for the second line
+		System.out.print("Last Name: ");
+        // Read the second line
+		String lastName = scan.nextLine();
+
+        // Prompt for age
+		System.out.print("Age: ");
+        // Read age
+		int age = scan.nextInt();
+
+        // Print results.
+		System.out.println("Hello " + firstName + " " + lastName);
+		System.out.println("You are " + age + " years old.");
 	}
 }
 
@@ -33,6 +37,7 @@ public class UserInput {
  Ask for a string one and string two. Then ask for noun/personName. Explain importance of properly naming
  variables.
  */
+
 // EXERCISE
 // INPUT
 // Name: <input name>

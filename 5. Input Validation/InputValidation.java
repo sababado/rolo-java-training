@@ -8,32 +8,41 @@ public class InputValidation {
 	public static void main(String args[]){
 		// Define a scanner to read from the system input.
 		Scanner scan = new Scanner(System.in);
-		
-		// Multiple variables can be defined on a single line.
+
+		// declare variables
 		int int1, int2;
-		
+		float decimalNumber;
+
 		try {
-			// scan for integer inputs.
-			System.out.print("Integer 1: ");
-			// the variable is initialized here.
+			// Scan for integer inputs.
+			System.out.print("Whole Number 1: ");
 			int1 = scan.nextInt();
-			System.out.print("Integer 2: ");
-			// the variable is initialized here.
+            scan.nextLine(); // catch the "\n" that nextInt doesn't read.
+            
+			System.out.print("Whole Number 2: ");
 			int2 = scan.nextInt();
-			// For formatting, add an extra blank line:
+            scan.nextLine(); // catch the "\n" that nextInt doesn't read.
+
+			System.out.print("Enter any number: ");
+			String temp = scan.nextLine();
+			decimalNumber = Float.parseFloat(temp);
+
 			System.out.println();
 		} catch (InputMismatchException e) {
-			System.out.println("Inputs must be integers and nothing else.");
+			System.out.println("Inputs must be a whole number and nothing else");
 			return;
-		}
-		
+        } catch (NumberFormatException e) {
+            System.out.println("A decimal or whole number is required, nothing else!");
+            return;
+        }
+
 		// Get off your ath and do some math.
-		int sum = int1 + int2;
+		int sum = int1 + int2 + Math.round(decimalNumber);
 		int difference = int1 - int2;
 		int product = int1 * int2;
 		int division = int1 / int2;
-		int remainder = int1 % int2;
-		
+		int remainder = int1 % int2; // modulus can only be used on integers
+
 		// Output the results
 		System.out.println("Sum: "+sum);
 		System.out.println("Difference: "+difference);
@@ -42,11 +51,3 @@ public class InputValidation {
 		System.out.println("Remainder: "+remainder);
 	}
 }
-
-/*
- TEACHING NOTES
- Revisit the input of an integer and show how to do exception handling.
- Explain the importance of input validation.
- Explain variable scope, variable definition and initialization.
- 
- */

@@ -1,14 +1,13 @@
 // Import the helper library. Java has many helper libraries available.
 import java.util.Scanner;
-import java.util.InputMismatchException;
 
 // The main class demonstrating conditionals and boolean logic.
 public class LogicOperators {
 	// Intro method to the program.
 	public static void main(String args[]){
-		// Define a scanner to read from the system input.
-		Scanner scan = new Scanner(System.in);
-		
+        // Define a scanner to read from the system input.
+        Scanner scan = new Scanner(System.in);
+        
         // Scan for integer inputs.
         System.out.print("Integer 1: ");
         int int1 = scan.nextInt();
